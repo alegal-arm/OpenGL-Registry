@@ -5333,24 +5333,24 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8251" name="GL_DEBUG_TYPE_OTHER_ARB"/>
         <enum value="0x8251" name="GL_DEBUG_TYPE_OTHER_KHR"/>
         <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET"/>
-        <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET_ARB"/>
-        <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET_EXT"/>
+        <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET_ARB" alias="GL_LOSE_CONTEXT_ON_RESET"/>
+        <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET_EXT" alias="GL_LOSE_CONTEXT_ON_RESET_KHR"/>
         <enum value="0x8252" name="GL_LOSE_CONTEXT_ON_RESET_KHR"/>
         <enum value="0x8253" name="GL_GUILTY_CONTEXT_RESET"/>
-        <enum value="0x8253" name="GL_GUILTY_CONTEXT_RESET_ARB"/>
-        <enum value="0x8253" name="GL_GUILTY_CONTEXT_RESET_EXT"/>
+        <enum value="0x8253" name="GL_GUILTY_CONTEXT_RESET_ARB" alias="GL_GUILTY_CONTEXT_RESET"/>
+        <enum value="0x8253" name="GL_GUILTY_CONTEXT_RESET_EXT" alias="GL_GUILTY_CONTEXT_RESET_KHR"/>
         <enum value="0x8253" name="GL_GUILTY_CONTEXT_RESET_KHR"/>
         <enum value="0x8254" name="GL_INNOCENT_CONTEXT_RESET"/>
-        <enum value="0x8254" name="GL_INNOCENT_CONTEXT_RESET_ARB"/>
-        <enum value="0x8254" name="GL_INNOCENT_CONTEXT_RESET_EXT"/>
+        <enum value="0x8254" name="GL_INNOCENT_CONTEXT_RESET_ARB" alias="GL_INNOCENT_CONTEXT_RESET"/>
+        <enum value="0x8254" name="GL_INNOCENT_CONTEXT_RESET_EXT" alias="GL_INNOCENT_CONTEXT_RESET_KHR"/>
         <enum value="0x8254" name="GL_INNOCENT_CONTEXT_RESET_KHR"/>
         <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET"/>
-        <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET_ARB"/>
-        <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET_EXT"/>
+        <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET_ARB" alias="GL_UNKNOWN_CONTEXT_RESET"/>
+        <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET_EXT" alias="GL_UNKNOWN_CONTEXT_RESET_KHR"/>
         <enum value="0x8255" name="GL_UNKNOWN_CONTEXT_RESET_KHR"/>
         <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY"/>
-        <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY_ARB"/>
-        <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY_EXT"/>
+        <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY_ARB" alias="GL_RESET_NOTIFICATION_STRATEGY"/>
+        <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY_EXT" alias="GL_RESET_NOTIFICATION_STRATEGY_KHR"/>
         <enum value="0x8256" name="GL_RESET_NOTIFICATION_STRATEGY_KHR"/>
         <enum value="0x8257" name="GL_PROGRAM_BINARY_RETRIEVABLE_HINT"/>
         <enum value="0x8258" name="GL_PROGRAM_SEPARABLE"/>
@@ -5381,8 +5381,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8260" name="GL_UNDEFINED_VERTEX_EXT"/>
         <enum value="0x8260" name="GL_UNDEFINED_VERTEX_OES"/>
         <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION"/>
-        <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION_ARB"/>
-        <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION_EXT"/>
+        <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION_ARB" alias="GL_NO_RESET_NOTIFICATION"/>
+        <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION_EXT" alias="GL_NO_RESET_NOTIFICATION_KHR"/>
         <enum value="0x8261" name="GL_NO_RESET_NOTIFICATION_KHR"/>
         <enum value="0x8262" name="GL_MAX_COMPUTE_SHARED_MEMORY_SIZE"/>
         <enum value="0x8263" name="GL_MAX_COMPUTE_UNIFORM_COMPONENTS"/>
@@ -9261,7 +9261,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x90F1" name="GL_MULTIVIEW_EXT"/>
         <enum value="0x90F2" name="GL_MAX_MULTIVIEW_BUFFERS_EXT"/>
         <enum value="0x90F3" name="GL_CONTEXT_ROBUST_ACCESS"/>
-        <enum value="0x90F3" name="GL_CONTEXT_ROBUST_ACCESS_EXT"/>
+        <enum value="0x90F3" name="GL_CONTEXT_ROBUST_ACCESS_EXT" alias="GL_CONTEXT_ROBUST_ACCESS_KHR"/>
         <enum value="0x90F3" name="GL_CONTEXT_ROBUST_ACCESS_KHR"/>
             <unused start="0x90F4" end="0x90FA" vendor="NV"/>
         <enum value="0x90FB" name="GL_COMPUTE_PROGRAM_NV"/>
@@ -16572,6 +16572,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto group="GraphicsResetStatus"><ptype>GLenum</ptype> <name>glGetGraphicsResetStatusEXT</name></proto>
+            <alias name="glGetGraphicsResetStatusKHR"/>
         </command>
         <command>
             <proto group="GraphicsResetStatus"><ptype>GLenum</ptype> <name>glGetGraphicsResetStatusKHR</name></proto>
@@ -19186,7 +19187,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="bufSize"><ptype>GLfloat</ptype> *<name>params</name></param>
-            <alias name="glGetnUniformfv"/>
+            <alias name="glGetnUniformfvKHR"/>
         </command>
         <command>
             <proto>void <name>glGetnUniformfvKHR</name></proto>
@@ -19223,7 +19224,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="bufSize"><ptype>GLint</ptype> *<name>params</name></param>
-            <alias name="glGetnUniformiv"/>
+            <alias name="glGetnUniformivKHR"/>
         </command>
         <command>
             <proto>void <name>glGetnUniformivKHR</name></proto>
@@ -25045,7 +25046,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="bufSize">void *<name>data</name></param>
-            <alias name="glReadnPixels"/>
+            <alias name="glReadnPixelsKHR"/>
         </command>
         <command>
             <proto>void <name>glReadnPixelsKHR</name></proto>
